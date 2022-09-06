@@ -12,3 +12,9 @@ test('do we have a button', () => {
   const aButton = screen.getByRole('button');
   expect(aButton).toBeInTheDocument()
 })
+
+test('Is there a h1', () => {
+  render(<App/>);
+  const theH1 = screen.getByRole('h1');
+  expect(theH1).toBeInTheDocument()
+})
