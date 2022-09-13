@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-import Button from '@mui/material/Button';
-import {TextField} from "@mui/material";
-import Grid from '@mui/material/Unstable_Grid2';
+import {HashRouter, Route, Routes, useParams} from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import React from "react";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    return (
+        <HashRouter>
+        <Routes>
+            <Route path="/" element ={ <Home  />}/>
+            <Route path='/about' element={<About /> } />
+            <Route path='/login' element={<Login/>}/>
+            <Route path="*" element={<h1>404!</h1>}/>
+            <Route path={"/ComponentA/:text"} component={ComponentA} />
+        </Routes>
+        </HashRouter>
+
+
+    );
+}
 
         <Grid container spacing={2}>
           <Grid xs={12} md={12}>
@@ -45,13 +46,10 @@ function App() {
           </Grid>
         </Grid>
 
-
-
-
-
-      </header>
+const ComponentA = ()=>{
+    let {text} = useParams();
+    return <div><h1>About {text}</h1>
     </div>
-  );
 }
 
 export default App;
