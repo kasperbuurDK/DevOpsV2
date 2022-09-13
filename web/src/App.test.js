@@ -15,6 +15,6 @@ test('do we have a button', () => {
 
 test('Is there a h1', () => {
   render(<App/>);
-  const theH1 = screen.getByRole('h1');
+  const theH1 = screen.getByRole('heading');
   expect(theH1).toBeInTheDocument()
 })
