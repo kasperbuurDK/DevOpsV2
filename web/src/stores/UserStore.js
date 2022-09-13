@@ -1,4 +1,4 @@
-import {makeAutoObservable, observable, runInAction} from "mobx";
+import {makeAutoObservable} from "mobx";
 
 class UserStore {
 
