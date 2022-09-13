@@ -35,5 +35,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.5",
+    "add": "^2.0.6",
+    "mobx": "^6.6.2",
+    "mobx-react-lite": "^3.4.0",
+    "react-router-dom": "^6.3.0"
   }
 }
