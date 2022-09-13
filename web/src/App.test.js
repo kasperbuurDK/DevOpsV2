@@ -7,8 +7,10 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('do we have a button', () => {
-  render(<App/>);
-  const aButton = screen.getByRole('button');
-  expect(aButton).toBeInTheDocument()
+test('button types', () => {
+render(<App/>);
+const buttons = screen.getAllByRole('button')
+  expect(buttons.length).toBe(3)
+
 })
+
