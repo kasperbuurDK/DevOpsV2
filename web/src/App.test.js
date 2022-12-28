@@ -8,3 +8,9 @@ test('button types', () => {
   expect(buttons.length).toBe(3)
 
 })
+
+test('store tester', () => {
+
+
+
+})
